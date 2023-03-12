@@ -54,30 +54,8 @@ const questions = [
     }
 ];
 
-const dataToWrite = `#${answers.title}\n
-##Description\n
-    ${}\n
-##Table of Contents\n
-    [Installation](##Installation)\n
-    [Usage](##Usage)\n
-    [Contributing](##Contributing)\n
-    [Tests](##Tests)\n
-    [Questions](##Questions)\n
-##Installation\n
-    ${}\n
-##Usage\n
-    ${}\n
-##Contributing\n
-    ${}\n
-##Tests\n
-    ${}\n
-##Questions\n
-   If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n
-   You may also view my GitHub profile at ${answers.ghUsername}.`;
-
-
 // // TODO: Create a function to write README file
-fs.writeToFile('readme.md', dataToWrite, function (error) {
+fs.writeToFile('readme.md', generateMarkdown, function (error) {
     if (error) {
         console.log(error);
     } else {
