@@ -55,7 +55,7 @@ const questions = [
 ];
 
 // // TODO: Create a function to write README file
-fs.writeToFile('readme.md', generateMarkdown, function (error) {
+fs.writeToFile('readme.md', dataToWrite, function (error) {
     if (error) {
         console.log(error);
     } else {

@@ -1,5 +1,4 @@
 // TODO: Create a function that returns a license badge based on which license is passed in. If there is no license, return an empty string
-
 function renderLicenseBadge(license) {
   let myBadge;
 switch (license) {
@@ -101,8 +100,8 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
- function renderLicenseSection(data.license) {
-  if (data.license) {const licenseSection = `##License\nThis project is licensed under the [${data.license}](${myBadge}). See the [license](${licenseLink}) documentation for more information.`
+ function renderLicenseSection(data) {
+  if (data.license) {const licenseSection = `##License\nThis project is licensed under the [${data.license}](${myBadge}). See the [license](${licenseLink}) documentation for more information.`;
 return licenseSection;
   } else {
     return "";
@@ -110,11 +109,13 @@ return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data, ) {
+function generateMarkdown(data, licenseSection) {
   const dataToWrite = `#${answers.title}\n
+  ${myBadge}\n
   ##Description\n
       ${answers.description}\n
   ##Table of Contents\n
+      [Description](##Description)\n
       [Installation](##Installation)\n
       [Usage](##Usage)\n
       [Contributing](##Contributing)\n
@@ -130,12 +131,14 @@ function generateMarkdown(data, ) {
       ${answers.contributing}\n
   ##Questions\n
     If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n
-    You may also view my GitHub profile at ${answers.ghUsername}\n.`
+    You may also view my GitHub profile at ${answers.ghUsername}\n.
+  ${licenseSection}`;
+  return dataToWrite;
 }
 
 module.exports = {
-//renderLicenseBadge,
-//renderLicenseLink,
-//renderLicenseSection,
+renderLicenseBadge,
+renderLicenseLink,
+renderLicenseSection,
 generateMarkdown
 };
