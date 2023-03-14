@@ -75,7 +75,8 @@ function writeDataToFile (dataToWrite) {
 inquirer.prompt(questions)
     .then((answers) => {
         const markdown = generateMarkdown(answers);
-        //const dataToWrite = writeDataToFile(markdown);
+        console.log(markdown);
+        writeDataToFile(markdown);
         console.log('Answers:', answers);
        // renderLicenseBadge(answers.license),
         //renderLicenseLink(answers.license),
