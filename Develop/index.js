@@ -55,13 +55,13 @@ const questions = [
 ];
 
 // // TODO: Create a function to write README file
-fs.writeToFile('readme.md', dataToWrite, function (error) {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log('Readme Generated!');
-    }
-});
+// fs.writeToFile('readme.md', dataToWrite, function (error) {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Readme Generated!');
+//     }
+// });
 
 // // TODO: Create a function to initialize app
 // // function init() {
@@ -73,6 +73,11 @@ fs.writeToFile('readme.md', dataToWrite, function (error) {
 inquirer.prompt(questions)
     .then((answers) => {
         console.log(answers);
+        renderLicenseBadge,
+        renderLicenseLink,
+        renderLicenseSection,
+        generateMarkdown();
+
         return answers
     })
     .catch((err) =>{

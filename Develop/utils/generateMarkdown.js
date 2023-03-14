@@ -137,8 +137,8 @@ function generateMarkdown(data, licenseSection) {
 }
 
 module.exports = {
-renderLicenseBadge,
-renderLicenseLink,
-renderLicenseSection,
-generateMarkdown
+  renderLicenseBadge,
+  renderLicenseLink,
+  renderLicenseSection,
+  generateMarkdown
 };
