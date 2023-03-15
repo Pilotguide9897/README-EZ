@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const {/*renderLicense,*/ renderLicenseSection, generateMarkdown, renderLicense} = require('./utils/generateMarkdown');
+const {renderLicenseSection, generateMarkdown, renderLicense} = require('./utils/generateMarkdown');
 const fs = require('fs');
 const {error} = require('console');
 
@@ -72,13 +72,13 @@ inquirer.prompt(questions)
         writeDataToFile(markdown);
         console.log('Answers:', answers);
         let licenseData = renderLicense(answers);
-        console.log(licenseData);
-        let licenseSectionValue = renderLicenseSection(answers);
+        console.log(licenseData); // This is working.
+        let licenseSectionValue = renderLicenseSection(answers, licenseObj);
         console.log(licenseSectionValue); //for testing
         console.log('success');
         //writeDataToFile (dataToWrite);
     })
-    .catch((err) =>{
+    .catch((err) => {
         console.log('this did not work'); //This can be for an error with any of them, I think.
         console.error(error);
     });
