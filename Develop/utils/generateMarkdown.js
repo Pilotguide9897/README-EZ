@@ -115,12 +115,12 @@ function generateMarkdown(answers/*, licenseSection*/) {
     ##Description\n
         ${answers.description}\n
     ##Table of Contents\n
-        [Description](##Description)\n
-        [Installation](##Installation)\n
-        [Usage](##Usage)\n
-        [Contributing](##Contributing)\n
-        [Tests](##Tests)\n
-        [Questions](##Questions)\n
+        [Description](#Description)\n
+        [Installation](#Installation)\n
+        [Usage](#Usage)\n
+        [Contributing](#Contributing)\n
+        [Tests](#Tests)\n
+        [Questions](#Questions)\n
     ##Installation\n
         ${answers.installation}\n
     ##Usage\n
@@ -131,7 +131,7 @@ function generateMarkdown(answers/*, licenseSection*/) {
         ${answers.tests}\n
     ##Questions\n
       If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n
-      You may also view my GitHub profile at http://github.com/${answers.ghUsername}\n.`
+      You may also view my GitHub profile at http://github.com/${answers.ghUsername}.\n`
   return dataToWrite;
 }
 
