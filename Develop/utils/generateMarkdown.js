@@ -98,16 +98,17 @@
 //   return licenseLink;
 // }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-//  function renderLicenseSection(answers) {
-//   if (answers.license) {
-//     const licenseSection = 10 `##License\nThis project is licensed under the [${answers.license}](${myBadge}). See the [license](${licenseLink}) documentation for more information.`;
-//     return licenseSection;
-//   } else {
-//     return "";
-//   }
-// }
+// TODO: Create a function that returns the license section of README. If there is no license, return an empty string
+ function renderLicenseSection(answers) {
+  if (answers.license) {
+    const licenseSection = `${answers.license}`; //This section should be working now!
+    
+    // `##License\nThis project is licensed under the [${answers.license}](${myBadge}). See the [license](${licenseLink}) documentation for more information.`;
+    return licenseSection;
+  } else {
+    return "";
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers/*, licenseSection*/) {
@@ -154,6 +155,6 @@ function generateMarkdown(answers/*, licenseSection*/) {
 module.exports = {
   // renderLicenseBadge,
   // renderLicenseLink,
-  // renderLicenseSection,
+  renderLicenseSection,
    generateMarkdown
 };
