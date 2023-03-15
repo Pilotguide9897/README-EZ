@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const {/*renderLicenseBadge, renderLicenseLink, renderLicenseSection, */ generateMarkdown} = require('./utils/generateMarkdown');
+const {/*renderLicenseBadge, renderLicenseLink, */renderLicenseSection, generateMarkdown} = require('./utils/generateMarkdown');
 const fs = require('fs');
 const {error} = require('console');
 
@@ -65,13 +65,6 @@ function writeDataToFile (dataToWrite) {
     });
 }
 
-// // TODO: Create a function to initialize app
-// // function init() {
-// // }
-
-// // Function call to initialize app
-// // init();
-
 inquirer.prompt(questions)
     .then((answers) => {
         const markdown = generateMarkdown(answers);
@@ -80,8 +73,8 @@ inquirer.prompt(questions)
         console.log('Answers:', answers);
         //renderLicenseBadge(answers.license),
         //renderLicenseLink(answers.license),
-        // let licenseSectionValue = renderLicenseSection(answers); //Trouble here.
-        // console.log(licenseSectionValue);
+        let licenseSectionValue = renderLicenseSection(answers); //Trouble here.
+        console.log(licenseSectionValue);
         console.log('success');
         //writeDataToFile (dataToWrite);
     })
@@ -89,3 +82,10 @@ inquirer.prompt(questions)
         console.log('this did not work'); //This can be for an error with any of them, I think.
         console.error(error);
     });
+
+// // TODO: Create a function to initialize app
+// // function init() {
+// // }
+
+// // Function call to initialize app
+// // init();
