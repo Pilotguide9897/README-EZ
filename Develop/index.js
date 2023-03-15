@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+const {/*renderLicenseBadge, renderLicenseLink, renderLicenseSection, */ generateMarkdown} = require('./utils/generateMarkdown');
 const fs = require('fs');
 const {error} = require('console');
 
@@ -55,13 +55,15 @@ const questions = [
 ];
 
 // // TODO: Create a function to write README file
-// fs.writeToFile('readme.md', dataToWrite, function (error) {
-//     if (error) {
-//         console.log(error);
-//     } else {
-//         console.log('Readme Generated!');
-//     }
-// });
+function writeDataToFile (dataToWrite) {
+    fs.writeFile('readme.md', dataToWrite, function (error) {
+        if (error) {
+            console.log('the error was here');
+        } else {
+            console.log('Readme Generated!');
+        }
+    });
+}
 
 // // TODO: Create a function to initialize app
 // // function init() {
@@ -72,14 +74,18 @@ const questions = [
 
 inquirer.prompt(questions)
     .then((answers) => {
-        console.log(answers);
-        renderLicenseBadge,
-        renderLicenseLink,
-        renderLicenseSection,
-        generateMarkdown();
-
-        return answers
+        const markdown = generateMarkdown(answers);
+        console.log(markdown);
+        writeDataToFile(markdown);
+        console.log('Answers:', answers);
+        //renderLicenseBadge(answers.license),
+        //renderLicenseLink(answers.license),
+        // let licenseSectionValue = renderLicenseSection(answers); //Trouble here.
+        // console.log(licenseSectionValue);
+        console.log('success');
+        //writeDataToFile (dataToWrite);
     })
     .catch((err) =>{
+        console.log('this did not work'); //This can be for an error with any of them, I think.
         console.error(error);
     });
