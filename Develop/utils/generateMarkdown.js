@@ -101,7 +101,8 @@
 // TODO: Create a function that returns the license section of README. If there is no license, return an empty string
  function renderLicenseSection(answers) {
   if (answers.license) {
-    const licenseSection = 10; 
+    const licenseSection = `${answers.license}`; //This section should be working now!
+    
     // `##License\nThis project is licensed under the [${answers.license}](${myBadge}). See the [license](${licenseLink}) documentation for more information.`;
     return licenseSection;
   } else {

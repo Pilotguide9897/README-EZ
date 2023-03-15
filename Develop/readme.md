@@ -18,15 +18,15 @@
 3
 
 ## Usage
-e
+4
 
 ## Contributing
-seven
+4
 
 ## Tests
-eight
+5
 
 ## Questions
 
-* If you have any questions concerning this application, do not hesitate to reach me at yours.
-* You may also view my GitHub profile at http://github.com/mine.
+* If you have any questions concerning this application, do not hesitate to reach me at 2.
+* You may also view my GitHub profile at http://github.com/1.
