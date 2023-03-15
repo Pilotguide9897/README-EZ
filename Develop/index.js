@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const {/*renderLicenseBadge, renderLicenseLink, */renderLicenseSection, generateMarkdown} = require('./utils/generateMarkdown');
+const {/*renderLicense,*/ renderLicenseSection, generateMarkdown, renderLicense} = require('./utils/generateMarkdown');
 const fs = require('fs');
 const {error} = require('console');
 
@@ -71,10 +71,10 @@ inquirer.prompt(questions)
         console.log(markdown);
         writeDataToFile(markdown);
         console.log('Answers:', answers);
-        //renderLicenseBadge(answers.license),
-        //renderLicenseLink(answers.license),
-        let licenseSectionValue = renderLicenseSection(answers); //Trouble here.
-        console.log(licenseSectionValue);
+        let licenseData = renderLicense(answers);
+        console.log(licenseData);
+        let licenseSectionValue = renderLicenseSection(answers);
+        console.log(licenseSectionValue); //for testing
         console.log('success');
         //writeDataToFile (dataToWrite);
     })
