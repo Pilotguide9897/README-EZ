@@ -111,27 +111,13 @@
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers/*, licenseSection*/) {
-  const dataToWrite = `#${answers.title}\n
-    ##Description\n
-        ${answers.description}\n
-    ##Table of Contents\n
-        [Description](##Description)\n
-        [Installation](##Installation)\n
-        [Usage](##Usage)\n
-        [Contributing](##Contributing)\n
-        [Tests](##Tests)\n
-        [Questions](##Questions)\n
-    ##Installation\n
-        ${answers.installation}\n
-    ##Usage\n
-        ${answers.usage}\n
-    ##Contributing\n
-        ${answers.contributing}\n
-    ##Tests\n
-        ${answers.tests}\n
-    ##Questions\n
-      If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n
-      You may also view my GitHub profile at http://github.com/${answers.ghUsername}\n.`
+  const dataToWrite = `# ${answers.title}\n## Description\n${answers.description}\n## Table of Contents\n[Description](#Description)\n
+[Installation](#Installation)\n 
+[Usage](#Usage)\n 
+[Contributing](#Contributing)\n 
+[Tests](#Tests)\n 
+[Questions](#Questions)\n## Installation\n${answers.installation}\n## Usage\n${answers.usage}\n## Contributing\n${answers.contributing}\n## Tests\n${answers.tests}\n## Questions\n
+* If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n* You may also view my GitHub profile at http://github.com/${answers.ghUsername}.\n`
   return dataToWrite;
 }
 
