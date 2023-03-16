@@ -67,12 +67,11 @@ function writeDataToFile (dataToWrite) {
 
 inquirer.prompt(questions)
     .then((answers) => {
-        const markdown = generateMarkdown(answers);
-        console.log(markdown);
-        // writeDataToFile(markdown);
         console.log('Answers:', answers);
         let licenseData = renderLicense(answers);
         console.log(`licenseData:`, licenseData); // This is working.
+        const markdown = generateMarkdown(answers, licenseData);
+        console.log(markdown);
         let licenseSectionValue = renderLicenseSection(answers, licenseData);
         console.log('licenseSectionValue:', licenseSectionValue); //for testing
         console.log('success');
