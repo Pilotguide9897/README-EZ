@@ -77,8 +77,9 @@ function renderLicense(answers) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(answers/*, licenseSection*/) {
+function generateMarkdown(answers, licenseData) {
   const dataToWrite = `# ${answers.title}\n
+![${answers.license}](${licenseData.myBadge})\n
 ## Description\n${answers.description}\n## Table of Contents\n[Description](#Description)\n
 [Installation](#Installation)\n 
 [Usage](#Usage)\n 
