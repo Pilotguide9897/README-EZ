@@ -1,6 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in. If there is no license, return an empty string
-// TODO: Create a function that returns a license URL based on which license is passed in. If there is no license, return an empty string
-
+// TODO1: Create a function that returns a license badge based on which license is passed in. If there is no license, return an empty string. TODO2: Create a function that returns a license URL based on which license is passed in. If there is no license, return an empty string
 function renderLicense(answers) {
     let licenseObj = {
         myBadge: '',
@@ -68,11 +66,10 @@ function renderLicense(answers) {
 }
 
 // TODO: Create a function that returns the license section of README. If there is no license, return an empty string
- function renderLicenseSection(answers) {
+ function renderLicenseSection(answers, licenseObj) {
   if (answers.license) {
-    const licenseSection = `${answers.license}`; //This section should be working now!
-    
-    // `##License\nThis project is licensed under the [${answers.license}](${myBadge}). See the [license](${licenseLink}) documentation for more information.`;
+    const licenseSection = `## License\nThis project is licensed under the ![${answers.license}](${licenseObj.myBadge}). See the [license](${licenseObj.licenseLink}) documentation for more information.`;
+    //`${answers.license}`; //This section should be working now!
     return licenseSection;
   } else {
     return "";
@@ -81,45 +78,18 @@ function renderLicense(answers) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers/*, licenseSection*/) {
-  const dataToWrite = `# ${answers.title}\n## Description\n${answers.description}\n## Table of Contents\n[Description](#Description)\n
+  const dataToWrite = `# ${answers.title}\n
+## Description\n${answers.description}\n## Table of Contents\n[Description](#Description)\n
 [Installation](#Installation)\n 
 [Usage](#Usage)\n 
 [Contributing](#Contributing)\n 
 [Tests](#Tests)\n 
-[Questions](#Questions)\n## Installation\n${answers.installation}\n## Usage\n${answers.usage}\n## Contributing\n${answers.contributing}\n## Tests\n${answers.tests}\n## Questions\n
+[Questions](#Questions)\n
+[License](#License)\n
+## Installation\n${answers.installation}\n## Usage\n${answers.usage}\n## Contributing\n${answers.contributing}\n## Tests\n${answers.tests}\n## Questions\n
 * If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n* You may also view my GitHub profile at http://github.com/${answers.ghUsername}.\n`
   return dataToWrite;
 }
-
-// TODO: Create a function to generate markdown for README
-// function generateMarkdown(data, licenseSection) {
-//   const dataToWrite = `#${answers.title};
-  
-//   `#${answers.title}\n
-//   ${myBadge}\n
-//   ##Description\n
-//       ${answers.description}\n
-//   ##Table of Contents\n
-//       [Description](##Description)\n
-//       [Installation](##Installation)\n
-//       [Usage](##Usage)\n
-//       [Contributing](##Contributing)\n
-//       [Tests](##Tests)\n
-//       [Questions](##Questions)\n
-//   ##Installation\n
-//       ${answers.installation}\n
-//   ##Usage\n
-//       ${answers.usage}\n
-//   ##Contributing\n
-//       ${answers.contributing}\n
-//   ##Tests\n
-//       ${answers.tests}\n
-//   ##Questions\n
-//     If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n
-//     You may also view my GitHub profile at ${answers.ghUsername}\n.
-//   ${licenseSection}`;
-//   return dataToWrite;
-// }
 
 module.exports = {
    renderLicense,
