@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 const {renderLicenseSection, generateMarkdown, renderLicense} = require('./utils/generateMarkdown');
 const fs = require('fs');
 const {error} = require('console');
+const {exec} = require('child_process');
+const { stdout, stderr } = require('process');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -84,8 +86,19 @@ inquirer.prompt(questions)
     });
 
 // // TODO: Create a function to initialize app
-// // function init() {
-// // }
+function init() {
+    const { exec } = require('child_process');
+    exec('npm install', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+    });
+  }
+  
+  init();  
 
 // // Function call to initialize app
-// // init();
+init();
