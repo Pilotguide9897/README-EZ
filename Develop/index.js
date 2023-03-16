@@ -72,9 +72,9 @@ inquirer.prompt(questions)
         writeDataToFile(markdown);
         console.log('Answers:', answers);
         let licenseData = renderLicense(answers);
-        console.log(licenseData); // This is working.
-        let licenseSectionValue = renderLicenseSection(answers, licenseObj);
-        console.log(licenseSectionValue); //for testing
+        console.log(`licenseData:`, licenseData); // This is working.
+        let licenseSectionValue = renderLicenseSection(answers, licenseData);
+        console.log('licenseSectionValue:', licenseSectionValue); //for testing
         console.log('success');
         //writeDataToFile (dataToWrite);
     })

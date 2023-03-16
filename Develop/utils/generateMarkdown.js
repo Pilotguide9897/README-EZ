@@ -69,7 +69,7 @@ function renderLicense(answers) {
  function renderLicenseSection(answers, licenseObj) {
   if (answers.license) {
     const licenseSection = `##License\nThis project is licensed under the [${answers.license}](${licenseObj.myBadge}). See the [license](${licenseObj.licenseLink}) documentation for more information.`;
-    // `${answers.license}`; //This section should be working now!
+    //`${answers.license}`; //This section should be working now!
     return licenseSection;
   } else {
     return "";
