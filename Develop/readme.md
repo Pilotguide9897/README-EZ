@@ -1,6 +1,6 @@
 # 1
 
-![]()
+![](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## Description
 1
@@ -24,15 +24,18 @@
 2
 
 ## Usage
+3
 
 ## Contributing
-w
+4
 
 ## Tests
-dlksf
+6
 
 ## Questions
 
 * If you have any questions concerning this application, do not hesitate to reach me at 2.
 * You may also view my GitHub profile at http://github.com/1.
 
+## License
+This project is licensed under the ![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg). See the [license](https://opensource.org/licenses/Apache-2.0) documentation for more information.

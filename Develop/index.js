@@ -86,19 +86,18 @@ inquirer.prompt(questions)
     });
 
 // // TODO: Create a function to initialize app
-function init() {
-    const { exec } = require('child_process');
-    exec('npm install', (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
-    });
-  }
-  
-  init();  
-
+// function init() {
+// if(!fs.existsSync('./node_modules')){
+//     console.log('npm dependencies not found. Installing...');
+//     exec('npm install', (error, stdout, stderr) => {
+//       if (error) {
+//         console.error(`exec error: ${error}`);
+//         return;
+//       }
+//       console.log(`stdout: ${stdout}`);
+//       console.error(`stderr: ${stderr}`);
+//     });
+//   }
+// }    
 // // Function call to initialize app
-init();
+// init();
