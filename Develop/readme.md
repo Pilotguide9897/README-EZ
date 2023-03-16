@@ -1,6 +1,7 @@
 # 1
+
 ## Description
-q
+w
 
 ## Table of Contents
 [Description](#Description)
@@ -14,19 +15,25 @@ q
 [Tests](#Tests)
  
 [Questions](#Questions)
+
+[License](#License)
+
 ## Installation
-w
+2
 
 ## Usage
-e
+4
 
 ## Contributing
-w
+2
 
 ## Tests
-w
+wq
 
 ## Questions
 
-* If you have any questions concerning this application, do not hesitate to reach me at w.
+* If you have any questions concerning this application, do not hesitate to reach me at 2.
 * You may also view my GitHub profile at http://github.com/q.
+
+## License
+This project is licensed under the ![GNU Lesser General Public License v2.1](https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg). See the [license](https://www.gnu.org/licenses/lgpl-2.1.html) documentation for more information.
