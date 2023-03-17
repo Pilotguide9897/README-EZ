@@ -1,5 +1,5 @@
 {
-  "name": "static-site",
+  "name": "readme_generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -e \"require('./index').init()\" && node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jared Green <jaredryan1997@hotmail.com>",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.4"
   }
