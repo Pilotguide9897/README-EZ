@@ -78,17 +78,24 @@ function renderLicense(answers) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers, licenseData) {
-  const dataToWrite = `# ${answers.title}\n
-![](${licenseData.myBadge})\n
-## Description\n${answers.description}\n## Table of Contents\n[Description](#Description)\n
-[Installation](#Installation)\n 
-[Usage](#Usage)\n 
-[Contributing](#Contributing)\n 
-[Tests](#Tests)\n 
-[Questions](#Questions)\n
-[License](#License)\n
-## Installation\n${answers.installation}\n## Usage\n${answers.usage}\n## Contributing\n${answers.contributing}\n## Tests\n${answers.tests}\n## Questions\n
-* If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n* You may also view my GitHub profile at http://github.com/${answers.ghUsername}.\n`
+  const dataToWrite = `# ${answers.title}
+![](${licenseData.myBadge})
+## Description\n${answers.description}
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing) 
+- [Tests](#tests) 
+- [Questions](#questions)
+- [License](#license)
+## Installation
+${answers.installation}
+## Usage\n${answers.usage}
+## Contributing\n${answers.contributing}
+## Tests\n${answers.tests}
+## Questions
+* If you have any questions concerning this application, do not hesitate to reach me at ${answers.email}.\n* You may also view my GitHub profile at http://github.com/${answers.ghUsername}.`
   return dataToWrite;
 }
 
