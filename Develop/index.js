@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 const {renderLicenseSection, generateMarkdown, renderLicense} = require('./utils/generateMarkdown');
 const fs = require('fs');
 const {error} = require('console');
+const {exec} = require('child_process');
+const { stdout, stderr } = require('process');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -56,7 +58,7 @@ const questions = [
 
 // // TODO: Create a function to write README file
 function writeDataToFile (dataToWrite) {
-    fs.writeFile('readme.md', dataToWrite, function (error) {
+    fs.writeFile('README.md', dataToWrite, function (error) {
         if (error) {
             console.log('the error was here');
         } else {
@@ -84,8 +86,18 @@ inquirer.prompt(questions)
     });
 
 // // TODO: Create a function to initialize app
-// // function init() {
-// // }
-
+function init() {
+if(!fs.existsSync('./node_modules')){
+    console.log('npm dependencies not found. Installing...');
+    exec('npm install', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+    });
+  }
+}    
 // // Function call to initialize app
-// // init();
+init();
