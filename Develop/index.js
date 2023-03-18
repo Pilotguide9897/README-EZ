@@ -6,6 +6,37 @@ const {error} = require('console');
 const {exec} = require('child_process');
 const { stdout, stderr } = require('process');
 
+// // TODO: Create a function to initialize app
+function init() {
+    return new Promise ((resolve, reject) => {
+        // Checking to see if dependencies are already installed.
+        if(!fs.existsSync('./node_modules')){
+            console.log('npm dependencies not found. Installing...');
+
+            // A child process to install the dependencies if they are not already installed
+            const child = exec('npm install');
+
+            //Waiting for the child process to install the dependencies before returning to execute the remainder of the code
+            child.on('exit', (code) => {
+                if (code !== 0) {
+                  console.error(`npm install failed with code ${code}`);
+                  reject();
+                } else {
+                  console.log('npm dependencies installed');
+                  resolve();
+                }
+              });
+            } else {
+              // Dependencies already installed
+              resolve();
+            }
+          });
+        }
+
+// Function call to initialize app
+init()
+    .then (() =>{
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -85,19 +116,4 @@ inquirer.prompt(questions)
         console.error(error);
     });
 
-// // TODO: Create a function to initialize app
-function init() {
-if(!fs.existsSync('./node_modules')){
-    console.log('npm dependencies not found. Installing...');
-    exec('npm install', (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
-    });
-  }
-}    
-// // Function call to initialize app
-init();
+});
