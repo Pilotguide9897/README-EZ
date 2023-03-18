@@ -5,7 +5,7 @@
 ## Description
 This application uses JavaScript, base  Node.js, and the Node.js inquire library to quickly and easily generate a professional README file for a user's project. The user is prompted to provide input in responds to several questions, and these answers are used to populate sections of the README. The questions that users are asked include the title of the project, a description of the project, instructions on how to install the project, the license type to be used, guidelines on how users can contribute to the project, a description of any bug testing that has been performed on the application, and the user's GitHub username and email address.
 
-A video illustrating this application's functionality may be viewed [here]().
+A video illustrating this application's functionality may be viewed [here](https://github.com/Pilotguide9897/README-EZ/blob/main/Demonstration/Challenge9%20-%20ReadmeEz.mp4).
 
 ## Table of Contents
 - [Description](#description)
@@ -17,6 +17,11 @@ A video illustrating this application's functionality may be viewed [here]().
 - [License](#license)
 
 ## Screenshots 
+![ExecutedApp]([image URL](https://github.com/Pilotguide9897/README-EZ/blob/main/ReadmeEz%20Screenshots/Screenshot%202023-03-17%20at%2011.14.26%20AM.png))
+![GeneratedMarkdown1]([image URL](https://github.com/Pilotguide9897/README-EZ/blob/main/ReadmeEz%20Screenshots/Screenshot%202023-03-17%20at%2011.16.02%20AM.png))
+![GeneratedMarkdown2]([image URL](https://github.com/Pilotguide9897/README-EZ/blob/main/ReadmeEz%20Screenshots/Screenshot%202023-03-17%20at%2011.16.15%20AM.png))
+![MarkdownPreview1]([image URL](https://github.com/Pilotguide9897/README-EZ/blob/main/ReadmeEz%20Screenshots/Screenshot%202023-03-17%20at%2011.17.15%20AM.png))
+![MarkdownPreview2]([image URL](https://github.com/Pilotguide9897/README-EZ/blob/main/ReadmeEz%20Screenshots/Screenshot%202023-03-17%20at%2011.17.28%20AM.png))
 
 ## Installation
 To install this application, clone the repository to your local machine. You can do this by running the following command in your terminal: 'git clone <repository-url>. The repo url can be achieved by clicking the green code button in the main repo page, clicking the SSH tab, and then copying the URL provided. Once the repo is cloned to the local system, navigate to the directory in the terminal until index.js is located. Index.js is the main file for this application. This application requires that users already have node.js and Node Package Manager (NPM) installed. For more information on installing these technologies please consult their official documentation. Although this application requires users to have the Inquirer node library installed as a dependency, a script is coded into the program to make sure that users already have the module installed before execution. If users do not have the necessary library, the applicaiton automatically installs before execution. Consequently, all users need to do to run this application is (1) make sure that they are in the correct directory, and (2) run 'node index.js' in their terminal of chioice. 
