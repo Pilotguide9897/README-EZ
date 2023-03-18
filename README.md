@@ -5,7 +5,7 @@
 ## Description
 This application uses JavaScript, base  Node.js, and the Node.js inquire library to quickly and easily generate a professional README file for a user's project. The user is prompted to provide input in responds to several questions, and these answers are used to populate sections of the README. The questions that users are asked include the title of the project, a description of the project, instructions on how to install the project, the license type to be used, guidelines on how users can contribute to the project, a description of any bug testing that has been performed on the application, and the user's GitHub username and email address.
 
-<iframe width="640" height="480" src="https://youtu.be/lpGFdAYFuPM" frameborder="0" allowfullscreen></iframe>
+A video illustrating this application's functionality may be viewed [here](https://youtu.be/lpGFdAYFuPM).
 
 ## Table of Contents
 - [Description](#description)
