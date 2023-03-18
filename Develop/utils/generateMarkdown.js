@@ -1,4 +1,4 @@
-// TODO1: Create a function that returns a license badge based on which license is passed in. If there is no license, return an empty string. TODO2: Create a function that returns a license URL based on which license is passed in. If there is no license, return an empty string
+// Creates a function that returns a license badge based on which license is passed in. If there is no license, return an empty string. Also creates a function that returns a license URL based on which license is passed in. If there is no license, return an empty string
 function renderLicense(answers) {
     let licenseObj = {
         myBadge: '',
@@ -65,11 +65,10 @@ function renderLicense(answers) {
     return licenseObj;
 }
 
-// TODO: Create a function that returns the license section of README. If there is no license, return an empty string
+// Creates a function that returns the license section of README. If there is no license, returns an empty string
  function renderLicenseSection(answers, licenseObj) {
   if (answers.license && licenseObj.myBadge !== '') {
     const licenseSection = `## License\nThis project is licensed under the ![${answers.license}](${licenseObj.myBadge}). See the [license](${licenseObj.licenseLink}) documentation for more information.`;
-    //`${answers.license}`; //This section should be working now!
     return licenseSection;
   } else {
     return "";
@@ -99,6 +98,7 @@ ${answers.installation}
   return dataToWrite;
 }
 
+// Exports the functions to be accessible in the other module.
 module.exports = {
    renderLicense,
    renderLicenseSection,
