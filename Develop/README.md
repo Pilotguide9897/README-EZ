@@ -1,7 +1,7 @@
-# 1
-![](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)
+# MyProject
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-2
+An application!
 
 ## Table of Contents
 - [Description](#description)
@@ -12,19 +12,19 @@
 - [Questions](#questions)
 - [License](#license)
 ## Installation
-w
+Installation is nice and easy
 
 ## Usage
-3
+Yes, definitely!
 
 ## Contributing
-5
+Contribution info here.
 
 ## Tests
-7
+Testing info here
 
 ## Questions
-* If you have any questions concerning this application, do not hesitate to reach me at 3.
-* You may also view my GitHub profile at http://github.com/2.
+* If you have any questions concerning this application, do not hesitate to reach me at jaredryann1997@hotmail.com.
+* You may also view my GitHub profile at http://github.com/Pilogguide9897.
 ## License
-This project is licensed under the ![BSD2-Clause 'simplified' License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg). See the [license](https://opensource.org/licenses/BSD-2-Clause) documentation for more information.
+This project is licensed under the ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg). See the [license](https://opensource.org/licenses/MIT) documentation for more information.
